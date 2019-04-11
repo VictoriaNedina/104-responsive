@@ -3,6 +3,7 @@ body{
     display:grid;
     grid-template-areas: 'navbar navbar navbar navbar''section section aside aside' 'footer footer footer footer';
     grid-template-rows: 15vh 60vh 25vh;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 /* ESTILO DA NAV COM BREAKPOINT EM 768 E 425 */
 nav{
@@ -17,6 +18,10 @@ nav a{
     color: white;
     font-size: 16pt;
     font-family: Arial, Helvetica, sans-serif;
+}
+nav a:hover {
+    text-decoration: none;
+    color: black;
 }
 /* ESTRUTURA DO MENUHAMBURGUER */
 #menuHamburguer{
@@ -34,7 +39,14 @@ nav a{
 }
 section{
     grid-area: section;
-    background-color: blue;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section img{
+    border-radius: 100px;
 }
 aside{
     grid-area: aside;
@@ -43,7 +55,32 @@ aside{
 footer{
     grid-area: footer;
     background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+footer div a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%
+}
+#redesSociais{
+    display: flex;
+    justify-content: space-around;
+    background-size: 100%;
+    background-color: forestgreen;
+}
+#linkNicolas{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+section h1{
+    color:rgb(40, 107, 102);
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    }
 /* MEDIDAS DA NAVBAR */
 /* TABLET */
 @media (max-width: 768px){
@@ -51,7 +88,7 @@ footer{
         display: none;
     }
     nav{
-        background-color: black;    
+        background-color: black;  
     }
     #menuHamburguer{
         display: flex;
@@ -75,7 +112,7 @@ footer{
     }
     section{
         grid-area: section;
-        background-color: rgb(30, 255, 0);
+        background-color: black;
     }
     aside{
         grid-area: aside;
@@ -85,4 +122,4 @@ footer{
         grid-area: footer;
         background-color: rgb(172, 19, 121);
     }
-}
+ }
