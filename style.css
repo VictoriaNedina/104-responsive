@@ -2,9 +2,10 @@ body{
     margin: 0%;
     display:grid;
     grid-template-areas: 'navbar navbar navbar navbar''section section aside aside' 'footer footer footer footer';
-    grid-template-rows: 15vh 60vh 25vh;
+    grid-template-rows: 15vh 80vh 25vh;
     grid-template-columns: 25% 25% 25% 25%;
 }
+
 /* ESTILO DA NAV COM BREAKPOINT EM 768 E 425 */
 nav{
     background-color: black;
@@ -13,16 +14,19 @@ nav{
     align-items: center;
     grid-area: navbar;
 }
+
 nav a{
     text-decoration: none;
     color: white;
     font-size: 16pt;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 nav a:hover {
     text-decoration: none;
     color: black;
 }
+
 /* ESTRUTURA DO MENUHAMBURGUER */
 #menuHamburguer{
     display: none;
@@ -30,6 +34,7 @@ nav a:hover {
     justify-content: space-around;
     width: 25px;
     height: 30px;
+
 }
 .trace{
     width: 100%;
@@ -37,6 +42,7 @@ nav a:hover {
     background-color: white;
     border-radius: 60px;
 }
+
 section{
     grid-area: section;
     background-color: black;
@@ -45,81 +51,103 @@ section{
     align-items: center;
     flex-direction: column;
 }
+
 section img{
     border-radius: 100px;
 }
+
 aside{
     grid-area: aside;
-    background-color: yellow;
+    background-color: rgb(255, 0, 170);
+    display: flex;
 }
+
+aside p{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 footer{
     grid-area: footer;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 footer div a{
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%
 }
+
 #redesSociais{
     display: flex;
     justify-content: space-around;
-    background-size: 100%;
-    background-color: forestgreen;
+    width: 500px;
 }
+
 #linkNicolas{
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    width: 500px;
 }
+
 section h1{
     color:rgb(40, 107, 102);
     font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
-/* MEDIDAS DA NAVBAR */
-/* TABLET */
+}
+
+/* MEDIDAS DA NAVBAR TABLET */
 @media (max-width: 768px){
     nav a{ 
         display: none;
     }
+
     nav{
         background-color: black;  
     }
+
     #menuHamburguer{
         display: flex;
     }
+
     body{
         grid-template-areas: 'navbar navbar navbar navbar''section section section section' 'aside aside aside aside' 'footer footer footer footer';
         grid-template-rows: 15vh 60vh 60vh 25vh;
     }
+
 }
+
 /* SMARTPHONE */
 @media (max-width: 425px){
     nav{
         justify-content: flex-start;
     }
+
     #menuHamburguer{
         margin: 10px;
     }
+
     body{
         grid-template-areas: 'navbar navbar navbar navbar''section section section section' 'aside aside aside aside' 'footer footer footer footer';
         grid-template-rows: 15vh 60vh 60vh 60vh;
     }
+
     section{
         grid-area: section;
         background-color: black;
     }
+
     aside{
         grid-area: aside;
         background-color: rgb(8, 171, 235);
     }
+
     footer{
         grid-area: footer;
         background-color: rgb(172, 19, 121);
     }
- }
+
+}
